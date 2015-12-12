@@ -6,57 +6,81 @@
     <title>Shopping List</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:500' rel='stylesheet' type='text/css'>
     <script src="js/jquery.js"></script>
     <script src="js/app.js"></script>
 </head>
 
 <body>
-    <header>Shopping List</header>
+    <header>Time to write.......Your Shopping List</header>
     <section class="wrapper">
         <ul>
-            <li class="shoppingListDairy">
+            <li class="shoppingListBreakfast">
                 <div class="listWrapper">
-                    <input type="text" value="" maxlength="20" placeholder="Add an item" id="addItemValueDairy">
-                    <button type="submit" id="addItemDairy">+</button>
-                    <ul class="shoppingListItemsDairy">
+                    <h1>Breakfast</h1>
+                    <input type="text" value="" maxlength="20" placeholder="Add an item" id="addItemValueBreakfast">
+                    <button type="submit" id="addItemBreakfast">+</button>
+                    <ul class="shoppingListItemsBreakfast">
                         <li>
-                            <button class="checkboxDairy">✓</button><span class="listDairy">Orange</span>
-                            <button class="deleteDairy">x</button>
+
+                            <button class="checkboxBreakfast">✓</button><span class="listBreakfast">Eggs</span>
+                            <button class="deleteBreakfast">x</button>
+
                         </li>
                         <li>
-                            <button class="checkboxDairy">✓</button><span class="listDairy">Orange</span>
-                            <button class="deleteDairy">x</button>
+                            <button class="checkboxBreakfast">✓</button><span class="listBreakfast">Bacon</span>
+                            <button class="deleteBreakfast">x</button>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li class="shoppingListMeat">
+            <li class="shoppingListLunch">
                 <div class="listWrapper">
-                    <input type="text" value="" maxlength="20" placeholder="Add an item" id="addItemValueMeat">
-                    <button type="submit" id="addItemMeat">+</button>
-                    <ul class="shoppingListItemsMeat">
+                    <h1>Lunch</h1>
+                    <input type="text" value="" maxlength="20" placeholder="Add an item" id="addItemValueLunch">
+                    <button type="submit" id="addItemLunch">+</button>
+                    <ul class="shoppingListItemsLunch">
                         <li>
-                            <button class="checkboxMeat">✓</button><span class="listMeat">Orange</span>
-                            <button class="deleteMeat">x</button>
+                            <button class="checkboxLunch">✓</button><span class="listLunch">Bread</span>
+                            <button class="deleteLunch">x</button>
                         </li>
                         <li>
-                            <button class="checkboxMeat">✓</button><span class="listMeat">Orange</span>
-                            <button class="deleteMeat">x</button>
+                            <button class="checkboxLunch">✓</button><span class="listLunch">Salami</span>
+                            <button class="deleteLunch">x</button>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li class="shoppingListMisc">
+            <li class="shoppingListDinner">
                 <div class="listWrapper">
+                    <h1>Dinner</h1>
+                    <input type="text" value="" maxlength="20" placeholder="Add an item" id="addItemValueDinner">
+                    <button type="submit" id="addItemDinner">+</button>
+                    <ul class="shoppingListItemsDinner">
+                        <li>
+                            <button class="checkboxDinner">✓</button><span class="listDinner">Spaghetti</span>
+                            <button class="deleteDinner">x</button>
+                        </li>
+                        <li>
+                            <button class="checkboxMisc">✓</button><span class="listMisc">Roast</span>
+                            <button class="deleteMisc">x</button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="shoppingListSnacks">
+                <div class="listWrapper">
+                    <h1>Snacks 'n Stuff</h1>
                     <input type="text" value="" maxlength="20" placeholder="Add an item" id="addItemValueMisc">
                     <button type="submit" id="addItemMisc">+</button>
                     <ul class="shoppingListItemsMisc">
                         <li>
-                            <button class="checkboxMisc">✓</button><span class="listMisc">Orange</span>
+                            <button class="checkboxMisc">✓</button><span class="listMisc">Chips</span>
                             <button class="deleteMisc">x</button>
                         </li>
                         <li>
-                            <button class="checkboxMisc">✓</button><span class="listMisc">Orange</span>
+                            <button class="checkboxMisc">✓</button><span class="listMisc">Ice Cream</span>
                             <button class="deleteMisc">x</button>
                         </li>
                     </ul>

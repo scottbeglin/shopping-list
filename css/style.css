@@ -9,6 +9,7 @@
     font-size: 100%;
 }
 
+
 /* General styles 
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li)) */
 
@@ -17,19 +18,30 @@ body {
     font-family: 'BenchNine', sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
+    background-image: url(../images/shopping.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 div {
     /*border: 1px solid Chocolate;*/
 }
+
 .content {
     padding: 0 0.938rem;
     margin: 0 auto;
     width: 70%;
 }
+
+li {
+    list-style: none;
+}
+
 li a {
     text-decoration: none;
     color: white;
 }
+
 
 /* Header styles 
 (all the styles inside the < header > or < nav > tags) 
@@ -40,67 +52,132 @@ li a {
 (all the styles inside the < sections > or < aside > tags) 
 */
 
+header {
+    background-color: #D3C6BB;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 1.25rem;
+    font-family: 'Permanent Marker', cursive, sans-serif;
+}
+
+.wrapper {
+    padding-top: 2rem;
+    margin: auto;
+    width: 90%;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+}
+
+.shoppingListBreakfast {
+    background-color: #7E7064;
+}
+
+.shoppingListBreakfast h1 {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 1.25rem;
+}
+
+.shoppingListLunch {
+    background-color: #4A4038;
+}
+
+.shoppingListLunch h1 {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: antiquewhite;
+    font-size: 1.25rem;
+}
+
+.shoppingListDinner {
+    background-color: #7E7064;
+}
+
+.shoppingListDinner h1 {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 1.25rem;
+}
+
+.shoppingListSnacks {
+    background-color: #4A4038;
+}
+
+.shoppingListSnacks h1 {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: antiquewhite;
+    font-size: 1.25rem;
+}
+
+input {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+}
 
 /* Footer styles 
 (all the styles inside the < footer > tag)
 */
 
-
 /* Responsive styles 
 (the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
 */
 
-
 /* media query is a set of conditions in which the code inside will be executed*/
-
 
 /*desktop first approach*/
 
-
 /*ipad lanscape / small laptop*/
-
 @media only screen and (max-width: 1024px) {
     body {
         color: blue;
     }
+    
     .content {
         width: 85%;
     }
+    
     .top-navigation .links li {
         margin-left: 9rem;
     }
+    
     .portfolio .content .projects li {
         width: 52%;
     }
 }
 
 /*ipad potrait*/
-
 @media only screen and (max-width: 768px) {
     body {
         color: red;
     }
+    
     .content {
         width: 99%;
     }
+    
     .top-navigation .links li {
         margin-left: 5.563rem;
     }
 }
 
 /*iPhone landscape*/
-
 @media only screen and (max-width: 480px) {
     body {
         color: green;
     }
+    
     .top-navigation .links li {
         margin-left: 1.563rem;
     }
 }
 
 /*iPhone portrait*/
-
 @media only screen and (max-width: 320px) {
     body {
         color: purple;
