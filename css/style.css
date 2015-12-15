@@ -9,6 +9,7 @@
     font-size: 100%;
 }
 
+
 /* General styles 
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li)) */
 
@@ -21,21 +22,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 div {
     /*border: 1px solid Chocolate;*/
 }
+
 .content {
     padding: 0 0.938rem;
     margin: 0 auto;
     width: 70%;
 }
+
 li {
     list-style: none;
 }
-li a {
-    text-decoration: none;
-    color: white;
-}
+
 
 /* Header styles 
 (all the styles inside the < header > or < nav > tags) 
@@ -54,6 +55,7 @@ header {
     padding-bottom: 1.25rem;
     font-family: 'Permanent Marker', cursive, sans-serif;
 }
+
 .wrapper {
     padding-top: 2rem;
     margin: auto;
@@ -62,45 +64,126 @@ header {
     -webkit-columns: 4;
     -moz-columns: 4;
 }
+
+.shoppingListItemsBreakfast,
+.shoppingListItemsLunch,
+.shoppingListItemsDinner,
+.shoppingListItemsSnacks {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.shoppingListBreakfast h1,
+.shoppingListLunch h1,
+.shoppingListDinner h1,
+.shoppingListSnacks h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .shoppingListBreakfast {
     background-color: #7E7064;
 }
+
 .shoppingListBreakfast h1 {
     text-align: center;
-    font-family: 'Alegreya Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 }
+
+.shoppingListBreakfast .listBreakfast {
+    font-size: 1.15rem;
+}
+
 .shoppingListLunch {
     background-color: #4A4038;
 }
+
+.shoppingListLunch .listLunch {
+    color: antiquewhite;
+    font-size: 1.15rem;
+}
+
 .shoppingListLunch h1 {
     text-align: center;
-    font-family: 'Alegreya Sans', sans-serif;
     color: antiquewhite;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 }
+
 .shoppingListDinner {
     background-color: #7E7064;
 }
+
 .shoppingListDinner h1 {
     text-align: center;
-    font-family: 'Alegreya Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 }
+
+.shoppingListDinner .listDinner {
+    font-size: 1.15rem;
+}
+
 .shoppingListSnacks {
     background-color: #4A4038;
 }
+
+.shoppingListSnacks .listSnacks {
+    color: antiquewhite;
+    font-size: 1.15rem;
+}
+
 .shoppingListSnacks h1 {
     text-align: center;
-    font-family: 'Alegreya Sans', sans-serif;
     color: antiquewhite;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 }
+
+.shoppingListItemsBreakfast li,
+.shoppingListItemsLunch li,
+.shoppingListItemsDinner li,
+.shoppingListItemsSnacks li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.shoppingListItemsBreakfast .checkboxBreakfast,
+.shoppingListItemsLunch .checkboxLunch,
+.shoppingListItemsDinner .checkboxDinner,
+.shoppingListItemsSnacks .checkboxSnacks {
+    margin-right: 1rem;
+}
+
+.shoppingListItemsBreakfast .deleteBreakfast,
+.shoppingListItemsLunch .deleteLunch,
+.shoppingListItemsDinner .deleteDinner,
+.shoppingListItemsSnacks .deleteSnacks {
+    float: right;
+    padding-top: .10rem;
+    padding-bottom: .10rem;
+}
+
+.shoppingListItemsBreakfast .deleteAllBreakfast,
+.shoppingListItemsLunch .deleteAllLunch,
+.shoppingListItemsDinner .deleteAllDinner,
+.shoppingListItemsSnacks .deleteAllSnacks {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .listWrapper,
 input {
     margin: 0 auto;
     text-align: center;
 }
+
+button {
+    background-color: #D3C6BB;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
 
 /* Footer styles 
 (all the styles inside the < footer > tag)
@@ -131,6 +214,7 @@ input {
     }
 }
 
+
 /*ipad potrait*/
 
 @media only screen and (max-width: 768px) {
@@ -138,6 +222,7 @@ input {
         color: red;
     }
 }
+
 
 /*iPhone landscape*/
 
@@ -149,6 +234,7 @@ input {
         margin-left: 1.563rem;
     }
 }
+
 
 /*iPhone portrait*/
 
