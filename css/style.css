@@ -60,9 +60,19 @@ header {
     padding-top: 2rem;
     margin: auto;
     width: 90%;
+    /*
     columns: 4;
     -webkit-columns: 4;
     -moz-columns: 4;
+    */
+}
+
+.shoppingListBreakfast,
+.shoppingListLunch,
+.shoppingListDinner,
+.shoppingListSnacks {
+    width: 24%;
+    display: inline-block;
 }
 
 .shoppingListItemsBreakfast,
@@ -182,6 +192,11 @@ button {
     background-color: #D3C6BB;
     padding-right: .5rem;
     padding-left: .5rem;
+}
+
+.ticked {
+    text-decoration: line-through;
+    color: gray;
 }
 
 

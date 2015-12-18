@@ -1,80 +1,98 @@
 var containerName = "";
 /*function to add items to list by clicking '+'*/
 function addItem(containerName) {
-    console.log("addItem" + containerName);
+    //get the value of the input box
+    var itemValue = $('#addItemValue' + containerName).val();
+
+    //validate input
+    if (itemValue.length === 0) {
+        alert('You have to add something!!!');
+
+    } else {
+        //dynamicaly create one row inside the shopping list 
+        var row = $('<li><button class="checkbox' + containerName + '">✓</button><span class="list' + containerName + '">' + itemValue + '</span><button class="delete' + containerName + '">x</button></li>');
+
+        //add each row to the previous ones
+        $('.shoppingListItems' + containerName).append(row);
+
+        //empty the input box after submit by reseting the value
+        itemValue = $('#addItemValue' + containerName).val('');
+    }
+    console.log("addItem" + itemValue);
+
 }
 
 /*function to delete items from list by clicking 'x'*/
 function deleteItem(containerName) {
-    console.log("deleteItem" + containerName);
-
+    $(this).parent().remove();
+    alert("here");
 }
 /*function to cross off items from list by clicking "checkmark"*/
 function crossItem(containerName) {
+    $(this).parent().toggleClass('ticked');
     console.log("crossItem" + containerName);
 
 }
 /*function to delete entire list by clicking 'delete all'*/
 function deleteAll(containerName) {
-    console.log("deleteAll" + containerName);
-
+    $('.shoppingListItems' + containerName).empty();
 }
 /*everything is loaded on page load (inside the document ready)*/
 $(document).ready(function () {
 
     /*on click on the "#addItemBreakfast", "#addItemLunch", "#addItemDinner", "addItemSnacks"  button fire the action called addItem()*/
     $('#addItemBreakfast').on('click', function () {
-        addItem("Breakfast")
+        addItem("Breakfast");
     });
     $('#addItemLunch').on('click', function () {
-        addItem("Lunch")
+        addItem("Lunch");
     });
     $('#addItemDinner').on('click', function () {
-        addItem("Dinner")
+        addItem("Dinner");
     });
     $('#addItemSnacks').on('click', function () {
-        addItem("Snacks")
+        addItem("Snacks");
     });
 
     /*on click on the ".deleteAllBreakfast", ".deleteAllLunch", ".deleteAllDinner", ".deleteAllSnacks"  button fire the action called deleteAll()*/
     $('.deleteAllBreakfast').on('click', function () {
-        deleteAll("Breakfast")
+        deleteAll("Breakfast");
     });
     $('.deleteAllLunch').on('click', function () {
-        deleteAll("Lunch")
+        deleteAll("Lunch");
     });
     $('.deleteAllDinner').on('click', function () {
-        deleteAll("Dinner")
+        deleteAll("Dinner");
     });
     $('.deleteAllSnacks').on('click', function () {
-        deleteAll("Snacks")
+        deleteAll("Snacks");
     });
 });
 
 /*on click on the ".deleteBreakfast", ".deleteLunch", ".deleteDinner", ".deleteSnacks" button fire the action called deleteItem()*/
 $(document).on('click', '.deleteBreakfast', function () {
-    deleteItem("Breakfast")
+    deleteItem("Breakfast");
 });
 $(document).on('click', '.deleteLunch', function () {
-    deleteItem("Lunch")
+    deleteItem("Lunch");
 });
 $(document).on('click', '.deleteDinner', function () {
-    deleteItem("Dinner")
+    deleteItem("Dinner");
 });
 $(document).on('click', '.deleteSnacks', function () {
-    deleteItem("Snacks")
+    deleteItem("Snacks");
 });
 
 /*on click on the ".checkboxBreakfast", ".checkboxLunch", ".checkboxDinner", ".checkboxSnacks" button fire the action called crossItem()*/
 $(document).on('click', '.checkboxBreakfast', function () {
-    crossItem("Breakfast")
+    crossItem("Breakfast");
 });
 $(document).on('click', '.checkboxLunch', function () {
-    crossItem("Lunch")
+    crossItem("Lunch");
 });
 $(document).on('click', '.checkboxDinner', function () {
-    crossItem("Dinner")
+    crossItem("Dinner");
 });
 $(document).on('click', '.checkboxSnacks', function () {
-    crossItem("Snacks")
+    crossItem("Snacks");
 });
