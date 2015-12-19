@@ -23,15 +23,13 @@ function addItem(containerName) {
 }
 
 /*function to delete items from list by clicking 'x'*/
-function deleteItem(containerName) {
-    $(this).parent().remove();
-    alert("here");
+function deleteItem(containerName, element) {
+    $(element).parent().remove();
 }
-/*function to cross off items from list by clicking "checkmark"*/
-function crossItem(containerName) {
-    $(this).parent().toggleClass('ticked');
-    console.log("crossItem" + containerName);
 
+/*function to cross off items from list by clicking "checkmark"*/
+function crossItem(containerName, element) {
+    $(element).parent().wrap("<strike>");
 }
 /*function to delete entire list by clicking 'delete all'*/
 function deleteAll(containerName) {
@@ -71,28 +69,28 @@ $(document).ready(function () {
 
 /*on click on the ".deleteBreakfast", ".deleteLunch", ".deleteDinner", ".deleteSnacks" button fire the action called deleteItem()*/
 $(document).on('click', '.deleteBreakfast', function () {
-    deleteItem("Breakfast");
+    deleteItem("Breakfast", this);
 });
 $(document).on('click', '.deleteLunch', function () {
-    deleteItem("Lunch");
+    deleteItem("Lunch", this);
 });
 $(document).on('click', '.deleteDinner', function () {
-    deleteItem("Dinner");
+    deleteItem("Dinner", this);
 });
 $(document).on('click', '.deleteSnacks', function () {
-    deleteItem("Snacks");
+    deleteItem("Snacks", this);
 });
 
 /*on click on the ".checkboxBreakfast", ".checkboxLunch", ".checkboxDinner", ".checkboxSnacks" button fire the action called crossItem()*/
 $(document).on('click', '.checkboxBreakfast', function () {
-    crossItem("Breakfast");
+    crossItem("Breakfast", this);
 });
 $(document).on('click', '.checkboxLunch', function () {
-    crossItem("Lunch");
+    crossItem("Lunch", this);
 });
 $(document).on('click', '.checkboxDinner', function () {
-    crossItem("Dinner");
+    crossItem("Dinner", this);
 });
 $(document).on('click', '.checkboxSnacks', function () {
-    crossItem("Snacks");
+    crossItem("Snacks", this);
 });
