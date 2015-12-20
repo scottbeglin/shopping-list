@@ -8,7 +8,9 @@ function addItem(containerName) {
     if (itemValue.length === 0) {
         alert('You have to add something!!!');
 
-    } else {
+    }
+    //if input is valid
+    else {
         //dynamicaly create one row inside the shopping list 
         var row = $('<li><button class="checkbox' + containerName + '">✓</button><span class="list' + containerName + '">' + itemValue + '</span><button class="delete' + containerName + '">x</button></li>');
 
